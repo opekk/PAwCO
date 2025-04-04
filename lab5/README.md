@@ -122,6 +122,7 @@ HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
 # uruchomienie nginx w trybie pierwszoplanowym
 CMD ["nginx", "-g", "daemon off;"]
 
+```
 
 # Polecenie do budowania obrazu
 ```bash 
