@@ -41,7 +41,7 @@ docker build -t weather-app .
 docker run -d -p 3000:3000 -e WEATHER_API_KEY=API_KEY --name weather weather-app
 ```
 
-![screen z budowania i uruchomienia obrazu][screens/screen1]
+![screen z budowania i uruchomienia obrazu](screens/screen1.png)
 
 ### 2. Uzyskanie informacji z logów, które wygenerowała aplikacja, sprawdzenie ilości wartsw i rozmiaru obrazu
 
@@ -53,4 +53,4 @@ docker image inspect weather-app --format='Liczba warstw: {{len .RootFS.Layers}}
 docker image inspect weather-app --format='{{.Size}}' | awk '{printf "Rozmiar: %.2f MB\n", $1 / (1024*1024)}'
 ```
 
-![screen z logów, wielkosci i ilości wartsw][screens/screen2]
+![screen z logów, wielkosci i ilości wartsw](screens/screen2.png)
